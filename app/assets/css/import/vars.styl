@@ -1,0 +1,37 @@
+$img_path = '/img/'
+$header_height = 146px
+$promo_height = 154px
+$pie_path = '/css/PIE.htc'
+
+shadow(x)
+    -moz-box-shadow: x
+    -webkit-box-shadow: x
+    box-shadow: x
+    behavior: url($pie_path)
+    _zoom: 0
+
+border-radius(radius)
+    -webkit-border-radius: radius
+    -moz-border-radius: radius
+    border-radius: radius
+    behavior: url($pie_path)
+
+grad($color = #F5F5F5, $start = #EEE, $stop = #FFF)
+    background: $color
+    background: -moz-linear-gradient(center bottom, $start, $stop)
+    background: -ms-linear-gradient(center bottom, $start, $stop)
+    background: -o-linear-gradient(center bottom, $start, $stop)
+    background: -webkit-gradient(linear, left bottom, left top, from($start), to($stop))
+    background: -webkit-linear-gradient(center bottom, $start, $stop)
+    background: linear-gradient(center bottom, $start, $stop)
+    -pie-background: linear-gradient($start, $stop);
+    behavior: url($pie_path)
+
+vectorgrad($position = center bottom, $color = #F5F5F5, $start = #EEE, $stop = #FFF)
+    background: $color
+    background: -moz-linear-gradient($position, $start, $stop)
+    background: -ms-linear-gradient($position, $start, $stop)
+    background: -o-linear-gradient($position, $start, $stop)
+    background: -webkit-gradient(linear, $position, $position, from($start), to($stop))
+    background: -webkit-linear-gradient($position, $start, $stop)
+    background: linear-gradient($position, $start, $stop)

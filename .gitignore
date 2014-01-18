@@ -6,10 +6,23 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.swp
+*.swo
 
+dist
 pids
-logs
+log
 results
-
-npm-debug.log
+public/uploads
+public/js/core
+public/components
+config/development.js
+config/production.js
+config/secrets.json
+public/js/core/models.js
 node_modules
+npm-debug.log
+.idea/*
+.settings/*
+/.settings/
+/*.project

@@ -1,0 +1,788 @@
+@import '../import/vars'
+
+body.login
+    background-color #404b62
+    background-image url($img_path"bg895x1.png")
+    background-repeat repeat-x
+
+    .login_form
+        width 300px
+        position fixed
+        left 50%
+        top 50%
+        margin-left -150px
+        margin-top -100px
+        text-align center
+
+        input
+            margin 5px
+            background none
+            border 1px solid #eeffff
+            width 240px
+            height 24px
+            color white
+        button
+            margin 5px
+            background-color #eeffff
+            border 1px solid #eeffff
+            width 80px
+            height 24px
+            cursor pointer
+            color #444444
+            border-radius(6px)
+
+body.application
+    font-size 1em
+    font-family Verdana,Arial
+    background-color #404b62
+    background-image url($img_path"bg895x1.png")
+    background-repeat repeat-x
+    padding 0
+    margin 0
+    .header
+        position relative
+        padding 0
+        margin 0
+        height 60px
+        width 100%
+        background-image url($img_path"header_strech.png")
+        background-repeat repeat-x
+        .header_center
+            position absolute
+            left 50%
+            padding 0
+            margin 0 0 0 -492px
+            width 980px
+            height 60px
+            background-image url($img_path"header.png")
+            .title
+                font-size 2em
+                color #b3cef0
+                margin 5px
+                float left
+            .authInfo
+                float right
+                text-align right
+                .name
+                    color white
+                    font-size 1.2em
+                .pos
+                    color white
+                    font-size 0.8em
+                .exit
+                    cursor pointer
+                    color #8bbaf6
+                    &:hover
+                        color #ffae3b
+    .table
+        margin 20px
+        table.mnptab
+            position absolute
+            left 50%
+            top 160px
+            margin-left -490px
+            width 980px
+            font-size 0.9em
+            border-spacing 0
+            border-collapse collapse
+            tr
+                color #000000
+                td
+                    padding 10px 30px 10px 7px
+                    border-width 0
+                    border-image-width 0
+                    .click-wrapper
+                        position relative
+                        width 26px
+                        height 26px
+                    .actionbtn
+                        position relative
+                        float left
+                        display block
+                        width 26px
+                        height 26px
+                        grad(#33547f, #33547f, #293f5c)
+                        border-radius(5px)
+                        color white
+                        text-align center
+                        cursor pointer
+                        &:hover
+                            grad(#293f5c, #293f5c, #33547f)
+                        div
+                            position absolute
+                            width 26px
+                            height 26px
+                            top 0
+                            left 0
+                        .viewbtn
+                            background-image url($img_path"view_ico.png")
+                            background-position 50% 50%
+                            background-repeat no-repeat
+                        .returnbtn
+                            background-image url($img_path"return_ico.png")
+                            background-position 50% 50%
+                            background-repeat no-repeat
+                        .workbtn
+                            background-image url($img_path"work_ico.png")
+                            background-position 50% 50%
+                            background-repeat no-repeat
+                td.outgoing
+                    color #c22607
+                td.incomming
+                    color #17ba01
+
+                td.fd
+                    padding 0
+                    .open
+                        background transparent url($img_path"open_btns.png") 0 0 no-repeat
+                        width 21px
+                        height 21px
+                        margin 5px 5px 5px 10px
+                        cursor pointer
+                        &:hover
+                            background-position 0 -21px
+                    .close
+                        background-position 0 -42px
+                        &:hover
+                            background-position 0 -63px
+
+                td.ld
+                    padding 10px 7px 10px 7px
+                    text-align center
+
+                td.info
+                    text-align center
+                    table
+                        tr
+                            td.l
+                                text-align right
+                                padding 5px 15px 5px 5px
+                                color #989898
+                                vertical-align top
+                            td.r
+                                text-align left
+                                padding 5px
+                                color black
+                                vertical-align top
+            tr.head
+                td
+                    cursor pointer
+                    background none
+                    background-color #b3cef0
+                    color white
+                    padding 10px 30px 10px 7px
+                    border 0
+                    border-bottom 1px solid #7b95b6
+                td.desc:hover
+                    background-image url($img_path"dwn_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                td.asc:hover
+                    background-image url($img_path"up_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                td.sorted_desc
+                    background-image url($img_path"dwn_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                    &:hover
+                        background-image url($img_path"dwn_arrow2.png")
+                td.sorted_asc
+                    background-image url($img_path"up_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                    &:hover
+                        background-image url($img_path"up_arrow2.png")
+
+            tr.even
+                background-color #ffffff
+                clear both
+                td
+                    border 0 !important
+            tr.odd
+                background-color #d7e8fe
+                clear both
+                td
+                    border 0 !important
+
+            tr.paging
+                td
+                    text-align center
+                    .paging
+                        width 100%
+                        position relative
+                        button
+                            padding 5px
+                            height 25px
+                            line-height 1
+                            display inline-block
+                            position relative
+                            color #d7e8fe
+                            cursor pointer
+                            background none
+                            border none
+                            outline none
+                            vertical-align middle
+                        button.active
+                            background-color #d7e8fe
+                            color #34445c
+                            border-radius(3px)
+                        button.firstpageset
+                            width 25px
+                            background-color #d7e8fe
+                            color #34445c
+                            border-radius(3px)
+                            background-image url($img_path"2_arrows_left.png")
+                            background-position 6px
+                            background-repeat no-repeat
+                            margin-left 2px
+                        button.prevpageset
+                            width 25px
+                            background-color #d7e8fe
+                            color #34445c
+                            border-radius(3px)
+                            background-image url($img_path"arrows_left.png")
+                            background-position 5px
+                            background-repeat no-repeat
+                            margin-left 2px
+                        button.nextpageset
+                            width 25px
+                            background-color #d7e8fe
+                            color #34445c
+                            border-radius(3px)
+                            background-image url($img_path"arrows_right.png")
+                            background-position 6px
+                            background-repeat no-repeat
+                            margin-left 2px
+                        button.lastpageset
+                            width 25px
+                            background-color #d7e8fe
+                            color #34445c
+                            border-radius(3px)
+                            background-image url($img_path"2_arrows_right.png")
+                            background-position 5px
+                            background-repeat no-repeat
+                            margin-left 2px
+
+
+
+
+    .tabblock
+        width 980px
+        position absolute
+        left 50%
+        top 120px
+        margin-left -490px
+        overflow hidden
+        ul.tablist
+            position relative
+            margin 0
+            padding 0
+            float left
+            font-size 0
+            li
+                font-size 14px
+                margin 1px
+                padding 3px
+                list-style-type none
+                padding 10px
+                line-height 18px
+                background-color #293f5b
+                border-radius(8px 8px 0 0)
+                color #b3cef0
+                cursor pointer
+                width 171px
+                text-align center
+                position relative
+                display inline-block
+                float left
+                _zoom 1
+            li.active
+                grad(#cfe1f8, #cfe1f8, #b3cef0)
+                color #293f5b
+                cursor default
+
+        .directionreqsort
+            float left
+            margin-left 30px
+            width 150px
+            padding 10px
+            cursor pointer
+            color white
+            .reqicon
+                width 16px
+                height 21px
+                float left
+                margin 0 10px 0 0
+                background transparent url($img_path"in_out.png") 0 -42px no-repeat
+            .in
+                background transparent url($img_path"in_out.png") 0 0 no-repeat
+            .out
+                background transparent url($img_path"in_out.png") 0 -21px no-repeat
+        .ns
+            cursor default
+
+    .findblock
+        width 980px
+        position absolute
+        left 50%
+        top 75px
+        margin-left -490px
+        padding-left 30px
+        background transparent url($img_path"search.png") 6px 3px no-repeat
+        font-size 0
+        .placeholder
+            color #ccc !important
+        .wrapper
+            padding 0 10px
+            display inline-block
+            position relative
+            background-color white
+            border none
+            border-radius(8px)
+            vertical-align top
+            margin-left 12px
+        input
+            width 160px
+            border none
+            font-size 14px
+            padding 8px 0
+            color black
+            outline none
+            &:-ms-input-placeholder
+                color #ccc !important
+        .active
+            box-shadow 0 0 5px 2px white
+        span
+            display inline-block
+            font-size 14px
+            margin-left 12px
+            padding 8px 10px
+            color white
+            cursor pointer
+            vertical-align top
+
+    .requestcontainer
+        width 980px
+        position absolute
+        left 50%
+        top 75px
+        margin-left -490px
+        .maininfo
+            background-color #233045
+            position relative
+            border none
+            border-radius(2px)
+            padding 20px
+            table.head
+                font-size 0.9em
+                tr
+                    td
+                        vertical-align top
+                    td.fl
+                        width 230px
+                    td.tbh
+                        text-align right
+                        padding 2px 5px 2px 0
+                        color #b3cef0
+                    td.tbc
+                        text-align left
+                        padding 2px 0 2px 5px
+                        color white
+                        width 170px
+                    td.orange
+                        color #ffae3b
+                    td.tbt
+                        vertical-align top
+                        position relative
+
+                        .showscan
+                            float right
+                            width 150px
+                            padding 10px
+                            position relative
+                            a
+                                text-decoration none
+                                color white
+                            .scanicon
+                                background-image url($img_path"scan_icon.png")
+                                background-repeat no-repeat
+                                cursor pointer
+                                height 29px
+                                width 23px
+                                float left
+                                margin 5px
+
+        .additionalinfo
+            background none
+            position relative
+            border none
+            padding-top 20px
+            table.main
+                width 100%
+                cursor default
+                font-size 0.9em
+                border-collapse collapse
+                tr
+                    td
+                        padding 4px
+                    td.left
+                        color #b3cef0
+                        border none
+                        background none
+                        vertical-align bottom
+                        text-align right
+                        width 230px
+                        .mini
+                            font-size 0.7em
+                        .advanced
+                            padding 20px 0
+                            color white
+                            margin 5px
+                            .plusicon
+                                background-image url($img_path"plus.png")
+                                background-repeat no-repeat
+                                cursor pointer
+                                height 15px
+                                width 15px
+                                float left
+                                margin 2px 0 2px 15px
+                        .confirm
+                            padding 20px
+                            color white
+                            width 100px
+                            margin 5px
+                    td.leftl
+                        width 32%
+                        vertical-align top
+                        padding 5px
+                        position relative
+                        .bluebtn, .yellowbtn
+                            width 45%
+                            margin 5px
+                            padding 20px 0
+                            text-align center
+                    td.last
+                        vertical-align top
+                        position relative
+                        .rejectconditions
+                            width 100%
+                            background-color #d7e8fe
+                            margin 0 0 10px 0
+                            textarea
+                                width 395px
+                                height 60px
+                                margin 10px 10px 0 10px
+                                background-color white
+                                border none
+                                resize none
+                                outline none
+                                color #989898
+                            select
+                                width 240px
+                                border none
+                                outline none
+                                background-color white
+                                color #535354
+                                margin 17px 10px 10px 10px
+                                padding 5px
+                        .reject
+                            padding 20px
+                            color white
+                            width 100px
+                            margin 5px
+                            position relative
+                            display inline-block
+                            _zoom 1
+                        .exit
+                            padding 20px
+                            color white
+                            width 100px
+                            margin 5px
+                    td.center
+                        color white
+                        .ltdtitle
+                            color #ffae3b
+                            margin-bottom 25px
+                            margin-left -10px
+                            font-weight bold
+                        background none
+                        border-width 1px
+                        border-color #b3cef0
+                        border-style none none solid none
+                        text-align left
+                        padding-left 20px
+                        vertical-align bottom
+                    td.checkresult
+                        background none
+                        border-width 1px
+                        border-color #b3cef0
+                        border-style none none solid none
+                        vertical-align bottom
+                        width 27px
+                        padding 2px
+                        .equalconfirmcheckbox
+                            width 19px
+                            height 19px
+                            background-color #233045
+                            color #f8a825
+                            background-image url($img_path"checked.png")
+                            background-position 4px 5px
+                            background-repeat no-repeat
+                            font-weight bold
+                            border none
+                            border-radius(5px)
+                            margin 4px
+                            cursor pointer
+                        .off
+                            background none
+                            background-color #233045
+
+                    td.right
+                        color #233045
+                        background-color #d7e8fe
+                        border-width 1px
+                        border-color #233045
+                        border-style none none solid none
+                        text-align left
+                        padding-left 20px
+                        vertical-align bottom
+                        .rtdtitle
+                            margin-bottom 25px
+                            margin-left -10px
+                            font-weight bold
+                    td.rightl
+                        border-color #d7e8fe
+    .realtime
+        position absolute
+        left 50%
+        top 160px
+        margin-left -490px
+        table.mnptab
+            width 980px
+            font-size 0.9em
+            border-spacing 0
+            border-collapse collapse
+            tr
+                color #000000
+                td
+                    padding 10px 30px 10px 7px
+                    border-width 0
+                    border-image-width 0
+                    .click-wrapper
+                        position relative
+                        width 26px
+                        height 26px
+                    .actionbtn
+                        position relative
+                        float left
+                        display block
+                        width 26px
+                        height 26px
+                        grad(#33547f, #33547f, #293f5c)
+                        border-radius(5px)
+                        color white
+                        text-align center
+                        cursor pointer
+                        &:hover
+                            grad(#293f5c, #293f5c, #33547f)
+            tr.head
+                td
+                    cursor pointer
+                    background none
+                    background-color #b3cef0
+                    color white
+                    padding 10px 30px 10px 7px
+                    border 0
+                    border-bottom 1px solid #7b95b6
+                td.desc:hover
+                    background-image url($img_path"dwn_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                td.asc:hover
+                    background-image url($img_path"up_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                td.sorted_desc
+                    background-image url($img_path"dwn_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                &:hover
+                    background-image url($img_path"dwn_arrow2.png")
+                td.sorted_asc
+                    background-image url($img_path"up_arrow1.png")
+                    background-repeat no-repeat
+                    background-position 95% 90%
+                &:hover
+                    background-image url($img_path"up_arrow2.png")
+            tr.even
+                background-color #ffffff
+                td
+                    border 0 !important
+            tr.odd
+                background-color #d7e8fe
+                clear both
+                td
+                    border 0 !important
+        table.stat
+            height: 70px
+            width 980px
+            font-size 0.9em
+            border-spacing 0
+            border-collapse collaps
+            background-color #233045
+            tr
+                color #b2cdef
+                td
+                  padding 0
+                  width 49.9%
+                  position relative
+                  //font-weight bold
+                  &.left-clmn
+                      text-align right
+                  &.right-clmn
+                      text-align left
+                  .label
+                      display inline-block
+                      text-align right
+                      width 165px
+                      margin-left 10px
+                      margin-bottom 15px
+                      color #B3CEF0
+                      white-space nowrap
+                      position relative
+                  .value
+                      display inline-block
+                      text-align left
+                      width 110px
+                      padding-left 10px
+                      margin-bottom 15px
+                      color #FFAE3B
+                      .alarm
+                          position relative
+                          display inline-block
+                          padding 2px 8px
+                          border-radius(3px)
+                          background-color #FD0202
+                          color #fff
+            tr.first
+                td
+                    padding-top 15px
+
+.toprocess
+  text-align center
+  color white
+  padding 10px
+  float right
+
+.yellowbtn
+    background-color #ef9bfe
+    text-shadow 0 0 6px #000000
+    background-color 
+    display inline-block
+    grad(#eb6600, #eb6600, #f7ad00)
+    border-radius(8px)
+    cursor pointer
+    position relative
+    &.leftbtn
+        float left
+    &.rightbtn
+        float right
+    &:hover
+        grad(#f7ad00, #f7ad00, #eb6600)
+
+.bluebtn
+    text-shadow 0 0 6px #000000
+    text-align center
+    display inline-block
+    grad(#32537d, #32537d, #233045)
+    border-radius(8px)
+    padding 20px 0
+    cursor pointer
+    width 45%
+    margin 5px
+    border none
+    &.leftbtn
+        float left
+    &.rightbtn
+        float right
+    &:hover
+        grad(#233045, #233045, #32537d)
+
+.footer-modalbtn
+    display block
+    margin 20px auto 0 auto
+    border none
+    .click-wrapper
+        display inline-block
+    .bluebtn
+        width 150px
+        color white
+
+.modaltab
+    font-size 0.9em
+    tr
+        td
+            vertical-align bottom
+            height 30px
+            .comment
+                weight 330px
+                height 100px
+                background-color white
+                border none
+                border-radius(7px)
+                color #222222
+                font-size 0.8em
+                padding 5px
+                margin 2px
+        td.c1
+            text-align right
+            padding-right 10px
+            color #233045
+            vertical-align top
+        td.c2
+            text-align left
+            color black
+            font-weight bold
+            padding-left 10px
+            vertical-align top
+
+.table-content-wrapper
+    display block
+    max-height 180px
+    overflow-y scroll
+    
+.modaltabhistorytitle
+    color #233045
+.modaltabhistory
+    width 100%
+    border-collapse collapse
+    border none
+    tr
+        td
+            background-color white
+            padding 5px 15px 5px 5px
+    tr.head
+        td
+            background-color #233045
+            color white
+
+.cancelfind
+    padding 10px
+    color white
+    margin 10px
+    border none
+
+.loading
+    background transparent url($img_path"preload.gif") 6px 3px no-repeat
+    width 48px
+    height 48px
+    margin 10px
+    float right
+
+.clear
+    clear both
+
+.modal
+    width 900px
+

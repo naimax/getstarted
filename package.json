@@ -1,0 +1,42 @@
+{
+    "name": "getstarted",
+    "version": "0.0.1",
+    "author": "",
+    "dependencies": {
+        "geddy": "latest",
+        "jade": "latest",
+        "weber": "1.0.x",
+        "utilities": "latest",
+        "request": "2.12.0",
+        "xml-simple": "latest",
+        "socket.io": "latest",
+        "lodash": "latest",
+        "xml2js": "latest",
+        "jsontoxml": "latest",
+        "async": "latest",
+        "activedirectory": "latest",
+        "moment": "latest"
+    },
+    "devDependencies": {
+        "grunt": "latest",
+        "grunt-contrib-coffee": "latest",
+        "grunt-coffeelint": "latest",
+        "grunt-contrib-coffee": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-clean": "latest",
+        "grunt-contrib-imagemin": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-stylus": "latest",
+        "grunt-contrib-watch": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-contrib-compress": "latest",
+        "grunt-contrib-cssmin": "latest",
+        "grunt-contrib-jade": "latest",
+        "grunt-ngmin":"latest",
+        "matchdep": "latest"
+    },
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.3.x"
+    }
+}
